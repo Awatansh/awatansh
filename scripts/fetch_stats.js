@@ -75,25 +75,55 @@ async function renderCFChart(stats) {
     .map(String);
   const data = labels.map((l) => stats[l] || 0);
 
-  const config = {
-    type: "bar",
-    data: {
-      labels,
-      datasets: [
-        {
-          label: "Problems Solved",
-          data,
-        },
-      ],
-    },
-    options: {
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { title: { display: true, text: "Codeforces Rating" } },
-        y: { title: { display: true, text: "Solved" }, beginAtZero: true },
+ const cfColors = [
+  "#808080", // Gray for 800-999
+  "#808080",
+  "#808080",
+  "#008000", // Green for 1200-1399
+  "#008000",
+  "#03A89E", // Cyan for 1400-1599
+  "#03A89E",
+  "#0000FF", // Blue for 1600-1799
+  "#0000FF",
+  "#AA00AA", // Purple for 1900-2099
+  "#AA00AA",
+  "#FF8C00", // Orange for 2200+
+];
+
+const config = {
+  type: "bar",
+  data: {
+    labels,
+    datasets: [
+      {
+        label: "Problems Solved",
+        data,
+        backgroundColor: labels.map((rating) => {
+          const r = parseInt(rating, 10);
+          if (r < 1200) return "#808080";   // Gray
+          if (r < 1400) return "#008000";   // Green
+          if (r < 1600) return "#03A89E";   // Cyan
+          if (r < 1800) return "#0000FF";   // Blue
+          if (r < 2100) return "#AA00AA";   // Purple
+          return "#FF8C00";                 // Orange
+        }),
+        borderColor: "#000000",
+        borderWidth: 1
       },
+    ],
+  },
+  options: {
+    plugins: { 
+      legend: { display: false },
+      title: { display: true, text: "Codeforces: Problems solved by rating" }
     },
-  };
+    scales: {
+      x: { title: { display: true, text: "Codeforces Rating" } },
+      y: { title: { display: true, text: "Solved" }, beginAtZero: true },
+    },
+  },
+};
+
 
   const buf = await chartJSNodeCanvas.renderToBuffer(config);
   fs.writeFileSync(path.join(assetsDir, "cf_rating_chart.png"), buf);
