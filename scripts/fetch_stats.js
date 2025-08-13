@@ -3,7 +3,7 @@ import path from "path";
 import fetch from "node-fetch";
 import { fileURLToPath } from "url";
 import { ChartJSNodeCanvas } from "chartjs-node-canvas";
-import Chart from 'chart.js/auto/auto.js';
+// no Chart import; no registerables; no chartCallback
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -63,13 +63,11 @@ async function renderCFChart(stats) {
   const width = 900,
     height = 420;
   const chartJSNodeCanvas = new ChartJSNodeCanvas({
-    width,
-    height,
-    chartCallback: (ChartJS) => {
-      // already registered above; keep for safety in some environments
-    },
-    backgroundColour: "white",
-  });
+  width,
+  height,
+  backgroundColour: "white",
+});
+
 
   const labels = Object.keys(stats)
     .map((x) => +x)
