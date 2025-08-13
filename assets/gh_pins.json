@@ -1,3 +1,46 @@
 {
-  "pins": []
+  "pins": [
+    {
+      "name": "MailWise",
+      "description": "",
+      "stars": 0,
+      "language": "JavaScript",
+      "url": "https://github.com/Awatansh/MailWise"
+    },
+    {
+      "name": "Web-File-Transfer",
+      "description": "",
+      "stars": 0,
+      "language": "C",
+      "url": "https://github.com/Awatansh/Web-File-Transfer"
+    },
+    {
+      "name": "CSES-Solutions",
+      "description": "Collection of my solutions for CSES Problem set",
+      "stars": 0,
+      "language": "C++",
+      "url": "https://github.com/Awatansh/CSES-Solutions"
+    },
+    {
+      "name": "SAMVAAD",
+      "description": "AI Chatbot built for IIIT-NR",
+      "stars": 0,
+      "language": "HTML",
+      "url": "https://github.com/Awatansh/SAMVAAD"
+    },
+    {
+      "name": "cpp-code-validator",
+      "description": "Code Validator for cpp code that tests the code for given input and delivers final verdict|| Written in Go for high speed performance",
+      "stars": 1,
+      "language": "Go",
+      "url": "https://github.com/Awatansh/cpp-code-validator"
+    },
+    {
+      "name": "Russian-Roulette",
+      "description": "Python simulation of high risk Russian Roulette",
+      "stars": 0,
+      "language": "Python",
+      "url": "https://github.com/Awatansh/Russian-Roulette"
+    }
+  ]
 }
