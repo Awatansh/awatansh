@@ -1,0 +1,15 @@
+{
+  "name": "auto-readme",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch_stats.js",
+    "render": "node scripts/generate_readme.js",
+    "build": "npm run fetch && npm run render"
+  },
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "node-fetch": "^3.3.2"
+  }
+}

@@ -1,0 +1,35 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # every 6 hours (IST-friendly enough)
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        run: npm ci || npm i
+
+      - name: Fetch stats
+        run: npm run fetch
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # optional, for pinned repos
+
+      - name: Render README
+        run: npm run render
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: auto-update README [skip ci]" || echo "No changes to commit"
+          git push
