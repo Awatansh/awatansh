@@ -19,8 +19,8 @@ A passionate software dev with a keen interest in problem solving and advanced a
 </div>
 
 ### Quick Stats
-- **LeetCode total solved:** 100
-- **AtCoder latest rating:** 648
+- **LeetCode total solved:** 104
+- **AtCoder latest rating:** 691
 
 ---
 
