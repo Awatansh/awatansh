@@ -9,7 +9,7 @@
   <a href="https://awatansh.vercel.app"><img src="https://img.shields.io/badge/PORTFOLIO-0D1117?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
   <a href="https://www.linkedin.com/in/awatansh-singh-9a0abb27b/"><img src="https://img.shields.io/badge/LINKEDIN-0D1117?style=for-the-badge&logo=linkedin&logoColor=67E8F9" alt="LinkedIn" /></a>
   <a href="mailto:awatanshsingh1@gmail.com"><img src="https://img.shields.io/badge/EMAIL-0D1117?style=for-the-badge&logo=gmail&logoColor=F472B6" alt="Email" /></a>
-  <a href="https://x.com/awatansh"><img src="https://img.shields.io/badge/@AWATANSH-0D1117?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://x.com/AwatanshSingh"><img src="https://img.shields.io/badge/@AWATANSH-0D1117?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
 </p>
 
 ```console
